@@ -1,0 +1,12 @@
+.dashboard {
+  padding: 40px;
+}
+
+.heading {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: gray;
+}
