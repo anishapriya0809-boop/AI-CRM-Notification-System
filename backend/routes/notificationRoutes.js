@@ -1,7 +1,5 @@
 const express = require("express");
-
 const router = express.Router();
-
 const authHeaders = require("../middleware/authHeaders");
 
 const {
@@ -14,11 +12,11 @@ const {
 
 router.use(authHeaders);
 
-router.post("/", createNotification);
+router.get("/unread-count", getUnreadCount);
 
 router.get("/", getNotifications);
 
-router.get("/unread-count", getUnreadCount);
+router.post("/", createNotification);
 
 router.patch("/:id/read", markNotificationRead);
 

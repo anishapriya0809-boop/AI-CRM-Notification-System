@@ -15,14 +15,23 @@ const getUnreadCount = async (tenantId, userId) => {
   });
 };
 
-const markNotificationRead = async (id, tenantId) => {
+const markNotificationRead = async (id, tenantId, userId) => {
   return await Notification.findOneAndUpdate(
-    { _id: id, tenantId },
+    {
+      _id: id,
+      tenantId,
+      $or: [
+        { userId: null },
+        { userId: userId }
+      ]
+    },
     {
       read: true,
       readAt: new Date()
     },
-    { new: true }
+    {
+      returnDocument: "after"
+    }
   );
 };
 

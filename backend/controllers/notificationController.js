@@ -84,8 +84,9 @@ exports.getNotifications = async (req, res) => {
 exports.getUnreadCount = async (req, res) => {
   try {
     const count = await getUnreadCountService(req.tenantId, req.userId);
-
-    return res.json({ unreadCount: count });
+    return res.status(200).json({
+      unreadCount: count,
+    });
   } catch (error) {
     return res.status(500).json({
       message: "Failed to get unread count",
@@ -96,13 +97,19 @@ exports.getUnreadCount = async (req, res) => {
 
 exports.markNotificationRead = async (req, res) => {
   try {
-    const notification = await markNotificationReadService(req.params.id, req.tenantId);
+    const notification = await markNotificationReadService(
+      req.params.id,
+      req.tenantId,
+      req.userId
+    );
 
     if (!notification) {
-      return res.status(404).json({ message: "Notification not found" });
+      return res.status(404).json({
+        message: "Notification not found",
+      });
     }
 
-    return res.json(notification);
+    return res.status(200).json(notification);
   } catch (error) {
     return res.status(500).json({
       message: "Failed to mark notification as read",

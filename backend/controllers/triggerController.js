@@ -28,9 +28,6 @@ exports.creatorReplied = async (req, res) => {
     const { tenantId, userId } = req;
     const { message } = req.body || {};
 
-    console.log("Request Body:", req.body);
-    console.log("Message:", message);
-
     const notification = await createNotification({
       tenantId,
       userId,
@@ -38,8 +35,6 @@ exports.creatorReplied = async (req, res) => {
       title: "Creator replied",
       body: message || "The creator replied to your outreach message.",
     });
-
-    console.log("Saved Notification:", notification);
 
     return res.status(201).json(notification);
 
