@@ -1,27 +1,45 @@
-import "../styles/notification.css";
+function NotificationCard({ notification, onRead }) {
 
-function NotificationCard({ icon, title, message, time, read }) {
+  const Icon = notification.icon;
+
   return (
-    <div className={`notification-card ${read ? "read" : ""}`}>
-      <div className="card-header">
-        <h3 className="notification-title">
-          {icon} {title}
-        </h3>
+    <div
+      className={`notification-card ${!notification.read ? "unread" : ""}`}
+      onClick={() => onRead(notification.id)}
+    >
 
-        <span className="notification-time">
-          {time}
-        </span>
+      <div className="notification-icon">
+        <Icon />
       </div>
 
-      <p className="notification-message">
-        {message}
-      </p>
+      <div className="notification-info">
 
-      {!read && (
-        <span className="unread">
-          ● Unread
-        </span>
-      )}
+        <div className="notification-top">
+
+          <h3>{notification.title}</h3>
+
+          <span>{notification.time}</span>
+
+        </div>
+
+        <p>{notification.message}</p>
+
+        <div className="notification-bottom">
+
+          <span className="category">
+            {notification.category}
+          </span>
+
+          {!notification.read && (
+            <span className="new-tag">
+              New
+            </span>
+          )}
+
+        </div>
+
+      </div>
+
     </div>
   );
 }

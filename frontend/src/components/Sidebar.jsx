@@ -4,48 +4,85 @@ import {
   FiBell,
   FiBarChart2,
   FiSettings,
+  FiLogOut,
 } from "react-icons/fi";
 
 import "../styles/sidebar.css";
 
 function Sidebar() {
   return (
-    <div className="sidebar">
-      <div className="logo">
-        <div className="logo-box">N</div>
-        <h2>AI CRM</h2>
-      </div>
+    <aside className="sidebar">
 
-      <nav className="menu">
-        <NavLink to="/" className="menu-item">
-          <FiGrid />
-          <span>Dashboard</span>
-        </NavLink>
+      <div>
 
-        <NavLink to="/notifications" className="menu-item">
-          <FiBell />
-          <span>Notifications</span>
-        </NavLink>
+        <div className="logo">
+          <div className="logo-icon">AI</div>
 
-        <NavLink to="/analytics" className="menu-item">
-          <FiBarChart2 />
-          <span>Analytics</span>
-        </NavLink>
-
-        <NavLink to="/settings" className="menu-item">
-          <FiSettings />
-          <span>Settings</span>
-        </NavLink>
-      </nav>
-
-      <div className="profile">
-        <div className="avatar">A</div>
-        <div>
-          <h4>Anisha</h4>
-          <p>Frontend Dev</p>
+          <div>
+            <h2>AI CRM</h2>
+            <small>Notification System</small>
+          </div>
         </div>
+
+        <div className="menu-title">
+          MAIN
+        </div>
+
+        <nav className="menu">
+
+          <NavLink to="/" className="menu-item">
+            <FiGrid />
+            Dashboard
+          </NavLink>
+
+          <NavLink to="/notifications" className="menu-item">
+            <FiBell />
+            Notifications
+          </NavLink>
+
+          <NavLink to="/analytics" className="menu-item">
+            <FiBarChart2 />
+            Analytics
+          </NavLink>
+
+          <NavLink to="/settings" className="menu-item">
+            <FiSettings />
+            Settings
+          </NavLink>
+
+        </nav>
+
       </div>
-    </div>
+
+      <div>
+
+        <div className="profile">
+
+          <div className="avatar">
+            AP
+          </div>
+
+          <div>
+
+            <h4>Anisha Priya</h4>
+
+            <p>Frontend Developer</p>
+
+          </div>
+
+        </div>
+
+        <button className="logout-btn">
+
+          <FiLogOut />
+
+          Logout
+
+        </button>
+
+      </div>
+
+    </aside>
   );
 }
 

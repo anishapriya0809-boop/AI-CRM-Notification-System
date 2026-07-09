@@ -1,0 +1,55 @@
+.chart-card{
+
+background:white;
+
+padding:25px;
+
+border-radius:18px;
+
+box-shadow:0 10px 25px rgba(15,23,42,.08);
+
+}
+
+.chart-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:20px;
+
+}
+
+.chart-header h3{
+
+font-size:22px;
+
+margin-bottom:6px;
+
+}
+
+.chart-header p{
+
+color:#64748B;
+
+}
+
+.chart-header button{
+
+background:#EEF2FF;
+
+border:none;
+
+padding:10px 16px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+font-weight:600;
+
+color:#4F46E5;
+
+}

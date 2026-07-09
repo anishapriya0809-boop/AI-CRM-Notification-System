@@ -1,20 +1,21 @@
 import Sidebar from "../components/Sidebar";
+import Topbar from "../components/Topbar";
+
+import "../styles/layout.css";
 
 function MainLayout({ children }) {
   return (
-    <>
+    <div className="app-layout">
       <Sidebar />
 
-      <div
-        style={{
-          marginLeft: "250px",
-          minHeight: "100vh",
-          background: "#f5f7fb",
-        }}
-      >
-        {children}
+      <div className="main-content">
+        <Topbar />
+
+        <div className="page-content">
+          {children}
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 
