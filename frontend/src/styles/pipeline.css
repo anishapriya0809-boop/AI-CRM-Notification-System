@@ -1,0 +1,73 @@
+.pipeline-card{
+    background:#fff;
+    padding:24px;
+    border-radius:18px;
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+}
+
+.pipeline-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.pipeline-header h3{
+    font-size:22px;
+}
+
+.pipeline-header button{
+    border:none;
+    background:none;
+    color:#4F46E5;
+    font-weight:600;
+    cursor:pointer;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#F8FAFC;
+}
+
+th{
+    text-align:left;
+    padding:15px;
+    color:#64748B;
+    font-size:14px;
+}
+
+td{
+    padding:18px 15px;
+    border-top:1px solid #EEF2F7;
+}
+
+.status{
+    padding:7px 14px;
+    border-radius:25px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.negotiation{
+    background:#EDE9FE;
+    color:#6D28D9;
+}
+
+.signed{
+    background:#DCFCE7;
+    color:#15803D;
+}
+
+.review{
+    background:#FEF3C7;
+    color:#B45309;
+}
+
+.contracting{
+    background:#DBEAFE;
+    color:#2563EB;
+}
