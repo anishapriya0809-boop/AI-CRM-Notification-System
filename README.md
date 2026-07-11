@@ -35,8 +35,6 @@ This project follows a **full-stack MERN architecture**, where:
 - View Notifications
 - Read / Unread Status
 - Notification Categories
-- Search Notifications
-- Filter Notifications
 - Mark Individual Notification as Read
 - Mark All Notifications as Read
 - Notification Bell with Unread Count
